@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 260px; margin: 0; padding: 10px; font: 12px system-ui, sans-serif; color: #222; }
+    h1 { font-size: 14px; margin: 0 0 8px; }
+    label { display: block; margin-bottom: 6px; }
+    input { width: 100%; box-sizing: border-box; padding: 4px; font: inherit; margin-top: 2px; }
+    .row { display: flex; gap: 6px; }
+    .row label { flex: 1; }
+    button { width: 100%; padding: 7px; margin-top: 4px; font: inherit; font-weight: 600; cursor: pointer; }
+    #status { margin-top: 8px; min-height: 16px; color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Coach Filter Opener</h1>
+
+  <label>Max tabs to process
+    <input id="maxTabs" type="number" min="1" value="15">
+  </label>
+
+  <label>Bio must contain (any, comma-separated)
+    <input id="include" type="text" value="coach">
+  </label>
+
+  <label>Bio must NOT contain (comma-separated)
+    <input id="exclude" type="text" value="">
+  </label>
+
+  <div class="row">
+    <label>Followers min
+      <input id="minFollowers" type="number" min="0" value="1000">
+    </label>
+    <label>Followers max
+      <input id="maxFollowers" type="number" min="0" value="500000">
+    </label>
+  </div>
+
+  <button id="run">Open + filter</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

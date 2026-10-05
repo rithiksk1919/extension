@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Coach Filter Opener",
+  "version": "1.0.0",
+  "description": "Opens visible Instagram post/reel tiles, checks each poster's profile against a filter, and keeps only the matches open. Read-only.",
+  "permissions": ["tabs", "scripting", "activeTab"],
+  "host_permissions": ["https://www.instagram.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Coach Filter Opener",
+    "default_popup": "popup.html"
+  }
+}
